@@ -7,10 +7,38 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox HorizontalAlignment="Left" Height="25" Margin="20,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox1"/>
-        <ComboBox HorizontalAlignment="Left" Height="25" Margin="220,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox2"/>
-        <ComboBox HorizontalAlignment="Left" Height="25" Margin="412,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox3"/>
-        <ComboBox HorizontalAlignment="Left" Height="25" Margin="598,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox4"/>
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="20,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox1">
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="White"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="220,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox2">
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="White"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="412,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox3">
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="White"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="598,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox4">
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="White"/>
+        </ComboBox>
         <Button Content="check answers" HorizontalAlignment="Center" Height="28" VerticalAlignment="Center" Width="332" Click="ValidateAnswers_Click" Name="validateAnswersButton"/>
         
 
