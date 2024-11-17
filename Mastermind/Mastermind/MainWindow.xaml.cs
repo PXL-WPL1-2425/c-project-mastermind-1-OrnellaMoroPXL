@@ -14,6 +14,8 @@ namespace Mastermind
         {
             InitializeComponent();
             GeneratedSolution();
+
+
         }
 
 
@@ -74,32 +76,43 @@ namespace Mastermind
         {
             ComboBox comboBox = sender as ComboBox;
             ComboBoxItem selectedItem = comboBox.SelectedItem as ComboBoxItem;
-            string selectedColor = selectedItem.Content.ToString();
+
+            if (selectedItem != null)
+            {
+
+                string selectedColor = selectedItem.Content.ToString();
 
 
-            if (comboBox == comboBox1)
-            {
-                colorLabel1.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+                if (comboBox == comboBox1)
+                {
+                    colorLabel1.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+                }
+                else if (comboBox == comboBox2)
+                {
+                    colorLabel2.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+                }
+                else if (comboBox == comboBox3)
+                {
+                    colorLabel3.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+                }
+                else if (comboBox == comboBox4)
+                {
+                    colorLabel4.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+                }
             }
-            else if (comboBox == comboBox2)
-            {
-                colorLabel2.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
-            }
-            else if (comboBox == comboBox3)
-            {
-                colorLabel3.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
-            }
-            else if (comboBox == comboBox4)
-            {
-                colorLabel4.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
-            }
-
         }
         private void ValidateAnswers_Click(object sender, RoutedEventArgs e)
         {
-
+            NoBorders();
         }
 
+        private void NoBorders()
+        {
+            border1.BorderBrush = Brushes.Transparent;
+            border2.BorderBrush = Brushes.Transparent;
+            border3.BorderBrush = Brushes.Transparent;
+            border4.BorderBrush = Brushes.Transparent;
+        }
 
     }
 }
