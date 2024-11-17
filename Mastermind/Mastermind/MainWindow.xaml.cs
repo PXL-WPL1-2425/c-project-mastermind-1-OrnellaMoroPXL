@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Mastermind
 {
@@ -27,7 +16,7 @@ namespace Mastermind
             GeneratedSolution();
         }
 
-        
+
 
         private void GeneratedSolution()
         {
@@ -42,36 +31,36 @@ namespace Mastermind
                 {
                     case 0:
                         solution += "Red";
-                    break;
+                        break;
 
                     case 1:
                         solution += "Orange";
-                    break;
+                        break;
 
                     case 2:
                         solution += "Yellow";
-                    break;
+                        break;
 
                     case 3:
                         solution += "Green";
-                    break;
+                        break;
 
                     case 4:
                         solution += "Blue";
-                    break;
+                        break;
 
                     case 5:
                         solution += "White";
-                    break;
+                        break;
 
                 }
                 if (i < 3)
                 {
                     solution += ", ";
                 }
-                
 
-                
+
+
 
             }
 
@@ -80,15 +69,36 @@ namespace Mastermind
 
 
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            ComboBoxItem selectedItem = comboBox.SelectedItem as ComboBoxItem;
+            string selectedColor = selectedItem.Content.ToString();
+
+
+            if (comboBox == comboBox1)
+            {
+                colorLabel1.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+            }
+            else if (comboBox == comboBox2)
+            {
+                colorLabel2.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+            }
+            else if (comboBox == comboBox3)
+            {
+                colorLabel3.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+            }
+            else if (comboBox == comboBox4)
+            {
+                colorLabel4.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(selectedColor));
+            }
+
+        }
         private void ValidateAnswers_Click(object sender, RoutedEventArgs e)
         {
 
         }
-
-
-
-
-
 
 
     }

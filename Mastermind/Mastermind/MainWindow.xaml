@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ComboBox HorizontalAlignment="Left" Height="25" Margin="20,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox1">
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="20,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox1" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Yellow"/>
@@ -15,7 +15,8 @@
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Height="25" Margin="220,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox2">
+        <Label Name="colorLabel1" HorizontalAlignment="Left" Margin="20,65,0,0" VerticalAlignment="Top" Width="169" Height="100"/>
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="220,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox2" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Yellow"/>
@@ -23,7 +24,8 @@
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Height="25" Margin="412,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox3">
+        <Label Name="colorLabel2" HorizontalAlignment="Left" Margin="220,65,0,0" VerticalAlignment="Top" Width="169" Height="100"/>
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="412,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox3" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Yellow"/>
@@ -31,7 +33,8 @@
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Height="25" Margin="598,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox4">
+        <Label Name="colorLabel3" HorizontalAlignment="Left" Margin="412,65,0,0" VerticalAlignment="Top" Width="169" Height="100"/>
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="598,35,0,0" VerticalAlignment="Top" Width="169" Name="comboBox4" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Yellow"/>
@@ -39,8 +42,10 @@
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
+        <Label Name="colorLabel4" HorizontalAlignment="Left" Margin="598,65,0,0" VerticalAlignment="Top" Width="169" Height="100"/>
         <Button Content="check answers" HorizontalAlignment="Center" Height="28" VerticalAlignment="Center" Width="332" Click="ValidateAnswers_Click" Name="validateAnswersButton"/>
-        
+
+
 
     </Grid>
 </Window>
